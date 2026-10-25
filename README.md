@@ -1,26 +1,24 @@
-# Deep Research (mi versión gratis)
+# Deep Research (my free version)
 
-Una app web que **investiga cualquier tema por internet y escribe un informe**, usando un equipo de agentes de IA.
-Funciona **100% gratis**: usa un modelo local con [Ollama](https://ollama.com) y busca con DuckDuckGo, sin claves de pago.
+A web app that **researches any topic on the internet and writes a report**, using a team of AI agents.
+It works **100% free**: it runs a local model with [Ollama](https://ollama.com) and searches with DuckDuckGo, so no paid API keys are needed.
 
-<!-- ![Captura de la app](docs) -->
+![Screenshot of the Deep Research web app](<front-desing/Captura de pantalla 2026-10-24 a la(s) 7.19.00 p.m..png>)
 
-![alt text](<front-desing/Captura de pantalla 2026-10-24 a la(s) 7.19.00 p.m..png>)
+## What it does
 
-##  Qué hace
+1. You type a question (for example, _"Most popular AI Agent frameworks in 2026"_).
+2. An agent **plans** which searches to run.
+3. The code **searches DuckDuckGo** and another agent **summarizes** each result.
+4. An agent **writes the full report** in Markdown.
+5. The report is **saved** in the `reports/` folder and, optionally, **sent by email**.
 
-1. Escribes una pregunta (por ejemplo, _"Most popular AI Agent frameworks in 2026"_).
-2. Un agente **planifica** qué búsquedas hacer.
-3. El código **busca en DuckDuckGo** y otro agente **resume** cada resultado.
-4. Un agente **escribe el informe** completo en Markdown.
-5. El informe se **guarda** en la carpeta `reports/` y, si quieres, se **envía por email**.
+The orchestration is done **in code** (`research_manager.py`): each step is a separate call to an agent, with retries and fallback plans in case the model fails.
 
-La orquestación se hace **por código** (`research_manager.py`): cada paso es una llamada separada a un agente, con reintentos y planes de respaldo si el modelo falla.
+## Tech stack
 
-## Tecnologías
-
-- [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) (conectado a Ollama)
-- [Ollama](https://ollama.com) con `llama3.2`
-- [Gradio](https://www.gradio.app) para la interfaz web
-- [Pydantic](https://docs.pydantic.dev) para las salidas estructuradas
-- [ddgs](https://pypi.org/project/ddgs/) para buscar en DuckDuckGo
+- [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) (connected to Ollama)
+- [Ollama](https://ollama.com) with `llama3.2`
+- [Gradio](https://www.gradio.app) for the web interface
+- [Pydantic](https://docs.pydantic.dev) for structured outputs
+- [ddgs](https://pypi.org/project/ddgs/) for searching DuckDuckGo
