@@ -3,7 +3,7 @@
 A web app that **researches any topic on the internet and writes a report**, using a team of AI agents.
 It works **100% free**: it runs a local model with [Ollama](https://ollama.com) and searches with DuckDuckGo, so no paid API keys are needed.
 
-![Screenshot of the Deep Research web app](<front-desing/Captura de pantalla 2026-10-24 a la(s) 7.19.00 p.m..png>)
+![alt text](<front-desing/Captura de pantalla 2026-10-24 a la(s) 7.19.00 p.m..png>)
 
 ## What it does
 
