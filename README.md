@@ -7,7 +7,7 @@ Funciona **100% gratis**: usa un modelo local con [Ollama](https://ollama.com) y
 
 ![alt text](<front-desing/Captura de pantalla 2026-10-24 a la(s) 7.19.00 p.m..png>)
 
-## ✨ Qué hace
+##  Qué hace
 
 1. Escribes una pregunta (por ejemplo, _"Most popular AI Agent frameworks in 2026"_).
 2. Un agente **planifica** qué búsquedas hacer.
